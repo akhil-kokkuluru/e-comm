@@ -4,9 +4,9 @@
  */
 
 module.exports = {
-  content: ["./src/**/*.js", "./src/Home Component/Home.jsx"],
+  content: ["./src/**/*.js", "./src/Home Component/Home.jsx",'node_modules/flowbite-react/lib/esm/**/*.js', '../e-comm-app/src/FavProductsPage/FavProducts.jsx' ],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('flowbite/plugin')],
 };

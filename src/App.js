@@ -1,14 +1,32 @@
 /** @format */
 
 import "./App.css";
-import Home from './Home Component/Home';
+import Home from "./Home Component/Home";
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+  Redirect,
+  Routes,
+} from "react-router-dom";
+import FavProducts from "./FavProductsPage/FavProducts";
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-7xl text-blue-400">AKHIL RAJA RAO </h1>
-      <Home/>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          exact
+          path="/"
+          component={Home}
+        />
+        <Route
+          exact
+          path="/fav-products"
+          component={FavProducts}
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
